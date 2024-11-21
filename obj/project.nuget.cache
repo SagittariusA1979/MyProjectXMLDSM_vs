@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "TkZhfuNsCQV6aQs29xTtvU7+phyXQtUxliNPTw9lBoenxSbre5C+G4R6wRsPNAsWKDCcaRTUWyu9x+RmDCQ3yQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\marelli\\Desktop\\DeskTop\\vs\\Designe\\C#\\MyProjectXMLDSMgit\\MyProjectXMLDSM_vs\\MyProjectXMLDSM_vs\\MyProjectXMLDSM_vs.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\marelli\\.nuget\\packages\\communitytoolkit.mvvm\\8.3.2\\communitytoolkit.mvvm.8.3.2.nupkg.sha512"
+  ],
+  "logs": []
+}

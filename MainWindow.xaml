@@ -1,0 +1,81 @@
+﻿<Window x:Class="MyProjectXMLDSM_vs.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyProjectXMLDSM_vs"
+        xmlns:vm="clr-namespace:MyProjectXMLDSM_vs.ModelViews"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        Title="ZplManager" Height="650" Width="1000">
+
+    <Window.DataContext>
+        <vm:NavigatorModelView/>
+    </Window.DataContext>
+
+    <Grid ShowGridLines="False">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150*"></ColumnDefinition>
+            <ColumnDefinition Width="850*"></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"></RowDefinition>
+            <RowDefinition Height="300*"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+
+        <Grid Grid.Row="1" Grid.Column="0" Background="GhostWhite" Margin="0,0,0,95" Grid.RowSpan="2">
+            <StackPanel Orientation="Vertical">
+                <Button Content="Printing" Command="{Binding ICitem01Command}" Width="100" Margin="8" FontFamily="Impact" HorizontalAlignment="Center" Height="48" Cursor="Hand">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+                <Button Content="Preparing" Command="{Binding ICitem02Command}" Width="100" Margin="8" FontFamily="Impact" Height="48" Cursor="Hand">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button Content="Setting" Command="{Binding ICitem03Command}" Width="100"  Margin="8" FontFamily="Impact" Height="47" Cursor="Hand">
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </StackPanel>
+
+            <!-- <StackPanel Orientation="Vertical">
+                <Button Content="Quit" Command="{Binding ICitem04}" Width="100" Margin="8,372,11,22" FontFamily="Impact" Height="48">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                </StackPanel> -->
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="1" Background="GhostWhite" Margin="0,0,0,34">
+            <ContentControl x:Name="ICitem01" Content="{Binding SelectViewModel}" Margin="5,5,5,5"/>
+        </Grid>
+    </Grid>
+</Window>
